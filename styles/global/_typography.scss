@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 100%;
+}
+
+body {
+  font-family: $f-light-normal;
+  font-size: rem($fs-default);
+  line-height: $lh-default;
+  color: $c-fit-gray-fg;
+}
+
+a,
+a:visited {
+  color: $c-fit-blue-default;
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:active {
+  color: $c-fit-blue-default;
+}
+
+address {
+  font-style: normal;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+cite {
+  font-family: $f-light-normal;
+  font-weight: normal;
+  margin: 0;
+  color: $c-fit-blue-default;
+}
+
+h1 {
+  font-family: $f-light-italic;
+  font-size: rem(40);
+  line-height: 1.3;
+  position: relative;
+  text-transform: uppercase;
+}
+
+
+h2 {
+  font-family: $f-light-italic;
+  font-size: rem(30);
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: rem(20);
+  //text-transform: uppercase;
+  font-family: $f-bold-normal;
+}
+
+p {
+  //margin: 0;
+}
+
+ul, ol {}
+
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table th,
+table td {
+  border: 1px solid #dedede;
+  background: #ffffff;
+  color: #373739;
+  text-align: center;
+  font-weight: normal;
+  padding: 15px 0 12px;
+}
+
+table td {
+  color: $c-fit-blue-default;
+}
+
+table th a:link,
+table th a:visited {
+  display: inline-block;
+  background: $c-fit-blue-default;
+  clear: both;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  font-family: $f-bold-italic;
+  color: #ffffff;
+  padding-top: 1px;
+}
+
+table + p {}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

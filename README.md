@@ -1,2 +1,3 @@
-# zupaa_theme
-Starter theme with fast stack.
+# Zupaa
+Starter theme with fast(er)(est) stack.
+

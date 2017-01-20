@@ -1,0 +1,25 @@
+/**
+ * @file
+ * Universal Box Sizing with inheritance.
+ */
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.page-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.l-container {
+  position: relative;
+  padding: 0 $width-gutter-half;
+  min-width: $width-min;
+  @include container(hide);
+}

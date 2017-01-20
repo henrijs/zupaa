@@ -1,0 +1,36 @@
+name: Zupaa theme
+type: theme
+description: Starter theme with fast(er)(est) stack.
+core: 8.x
+package: Zupaa
+
+# Defines the base theme
+base theme: stable
+
+# Defines libraries group in which we can add css/js.
+libraries:
+  - core/normalize
+  - zupaa/global
+
+libraries-override:
+  core/jquery.ui.accordion:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/accordion.css: false
+
+# Regions
+ckeditor_stylesheets:
+  - css/editor.css
+
+# Regions
+regions:
+  header: Pre Header
+  primary_menu: Header first
+  secondary_menu: First Menu Region
+  breadcrumb: Hero Region
+  highlighted: Pre content
+  help: Content
+  content: Closure first
+  sidebar_first: Closure second
+  sidebar_second: Closure third
+  footer: Footer first

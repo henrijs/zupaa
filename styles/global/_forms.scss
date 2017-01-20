@@ -1,0 +1,107 @@
+// Form
+// ---------------------------------------------------------------------------------------------------------------------
+
+form {
+  width: 100%;
+  text-align: left;
+}
+
+// Label
+// ---------------------------------------------------------------------------------------------------------------------
+
+label {
+  display: block;
+  margin-bottom: .25rem;
+}
+
+// Fieldset
+// ---------------------------------------------------------------------------------------------------------------------
+
+fieldset {
+  border: none;
+}
+
+legend {
+  width: 100%;
+  margin-bottom: .75rem;
+}
+
+// Select, input, textarea
+// ---------------------------------------------------------------------------------------------------------------------
+
+select,
+input,
+textarea {
+  width: 100%;
+  font-family: $f-light-normal;
+  line-height: normal;
+  border: solid 1px #e3e3e3;
+  padding: .5rem .75rem;
+}
+
+// Select
+// ---------------------------------------------------------
+
+select {
+  cursor: pointer;
+}
+
+// Input, text
+// ---------------------------------------------------------
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  outline: none;
+}
+
+// Textarea
+// ---------------------------------------------------------
+
+textarea {
+  width: 100%;
+  outline: none;
+  resize: none;
+}
+
+// Input, submit
+// ---------------------------------------------------------
+
+form button {
+  @extend %button;
+}
+
+// Check box, radio button
+// ---------------------------------------------------------------------------------------------------------------------
+
+input[type="checkbox"],
+input[type="radio"] {
+  float: left;
+  width: auto;
+  margin-right: 4px;
+  margin-top: .75rem;
+  position: relative;
+  top: 2px;
+}
+
+// Placeholder
+// ---------------------------------------------------------------------------------------------------------------------
+
+::-webkit-input-placeholder {
+  color: #bdbdbd;
+}
+
+:-moz-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  color: #bdbdbd;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #bdbdbd;
+}

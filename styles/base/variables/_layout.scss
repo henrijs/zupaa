@@ -1,0 +1,92 @@
+@import "typography";
+
+$width-min: rem(400);
+$width-max: rem(1300);
+$width-gutter: 4rem;
+$width-gutter-half: $width-gutter / 2;
+$width-gutter-double: $width-gutter * 2;
+
+$susy: (
+        columns: 12,
+        gutter-position: inside-static,
+        global-box-sizing: border-box,
+        container: $width-max,
+        gutters: $width-gutter/8rem,
+        column-width: 8rem,
+        debug: (
+                color: rgba(blue, .08),
+                image: show,
+                output: overlay,
+                toggle: bottom left
+        )
+);
+
+//$susy: (
+//  flow: ltr,
+//  math: fluid,
+//  output: float,
+//  gutter-position: after,
+//  container: $width-max,
+//  container-position: center,
+//  columns: 12,
+//  gutters: .5,
+//  column-width: false,
+//  global-box-sizing: border-box,
+//  last-flow: to,
+//  debug: (
+//    image: show,
+//    color: rgba(magenta, .2),
+//    //output: overlay,
+//    //toggle: bottom right,
+//  ),
+//  use-custom: (
+//  //  box-sizing: false,
+//    clearfix: true,
+//    breakpoint: false,
+//  //  rem: false,
+//  )
+//);
+
+// Breakpoints.
+$bps-medium: 400px;
+$bps-large: 920px;
+$bps-larger: 950px;
+$bps-x-large: 1110px;
+$bps-xx-large: 1130px;
+
+$bp-small: 0 $bps-medium;
+$bp-medium: ($bps-medium + 1px) $bps-large;
+$bp-large: ($bps-large + 1px);
+$bp-larger: ($bps-larger + 1px);
+$bp-x-large: ($bps-x-large + 1px);
+$bp-xx-large: ($bps-xx-large + 1px);
+
+$bp-medium-down: 0 $bps-large;
+$bp-medium-up: ($bps-medium + 1px);
+
+// Brand breakpoints.
+$bps-fit-small: 640px;
+$bps-fit-medium: 980px;
+$bps-fit-large: 1200px;
+
+$bp-fit-small: 0 ($bps-fit-small - 1px);
+$bp-fit-medium: $bps-fit-small ($bps-fit-medium - 1px);
+$bp-fit-large: $bps-fit-medium ($bps-fit-large - 1px);
+$bp-fit-full: $bps-fit-large;
+
+$bp-fit-medium-up: $bps-fit-small;
+$bp-fit-medium-down: 0 $bps-fit-medium;
+$bp-fit-large-up: $bps-fit-medium;
+$bp-fit-large-down: 0 $bps-fit-large;
+$bp-fit-medium-large: $bps-fit-small ($bps-fit-large - 1px);
+
+// FFA header breakpoints.
+$bps-ffa-medium: 600px;
+$bps-ffa-large: 1000px;
+
+$bp-ffa-small: 0 ($bps-ffa-medium - 1px);
+$bp-ffa-medium: $bps-ffa-medium ($bps-ffa-large - 1px);
+$bp-ffa-large: $bps-ffa-large;
+
+$bp-ffa-medium-down: 0 ($bps-ffa-large - 1px);
+$bp-ffa-medium-up: $bps-ffa-medium;

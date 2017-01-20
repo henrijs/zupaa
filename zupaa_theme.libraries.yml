@@ -1,0 +1,51 @@
+fitfirst__match_height:
+  js:
+    node_modules/jquery-match-height/dist/jquery.matchHeight-min.js: {}
+  dependencies:
+    - core/jquery
+
+fitfirst__owl_carousel:
+  js:
+    node_modules/owl.carousel/dist/owl.carousel.min.js: {}
+  css:
+    component:
+      node_modules/owl.carousel/dist/assets/owl.carousel.min.css: {}
+  dependencies:
+    - core/jquery
+
+fitfirst__waypoints:
+  js:
+    node_modules/jquery-waypoints/waypoints.min.js: {}
+    node_modules/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js: {}
+  dependencies:
+    - core/jquery
+
+global:
+  js:
+    js/element--select.js: {}
+    js/links--external.js: {}
+    js/menu--footer--toggle.js: {}
+    js/menu--primary--toggle.js: {}
+  css:
+    component:
+      css/style.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+debug__browsersync:
+  js:
+    js/debug--browsersync.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+debug__layout:
+  js:
+    js/debug--layout.js: {}
+  css:
+    component:
+      css/debug.css: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
