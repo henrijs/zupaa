@@ -8,10 +8,10 @@ var
 
 // Paths.
 var paths = {
-  js:     'scripts/**/*.js',
-  css:    'css',
+  scripts:     'scripts/**/*.js',
+  css:    'dist/css',
   maps:    '.',
-  sass:   'styles/**/*.scss',
+  styles:   'styles/**/*.scss',
   templates:   'templates/**/*.twig',
   images: {
     original: 'images/original/**/*.svg',
@@ -22,7 +22,7 @@ var paths = {
 gulp.task('sync', ['development'], function() {
   browserSync.init({
     notify: true,
-    logPrefix: "FitFirst",
+    logPrefix: "Theme",
     logConnections: true,
     logFileChanges: false,
     logSnippet: false,
@@ -31,11 +31,11 @@ gulp.task('sync', ['development'], function() {
     ghostMode: true
   });
 
-  gulp.watch(paths.sass, ['development']);
+  gulp.watch(paths.styles, ['development']);
 });
 
 gulp.task('development', function() {
-  return gulp.src(paths.sass)
+  return gulp.src(paths.styles)
     .pipe(plugins.sourcemaps.init())
     .pipe(plugins.sass({
       precision: 10
@@ -50,7 +50,7 @@ gulp.task('development', function() {
 });
 
 gulp.task('css', function() {
-  return gulp.src(paths.sass)
+  return gulp.src(paths.styles)
     .pipe(plugins.sass({
       precision: 10
     }))
@@ -62,30 +62,6 @@ gulp.task('css', function() {
     .pipe(gulp.dest(paths.css));
 });
 
-// Optimize images
-var svg_config = {
-  mode: {
-    css: {
-      bust: false,
-      dest: 'sprite',
-      render: {
-        scss: {
-          dest: '_sprite.scss',
-          template: 'images/sprite.mustache'
-        }
-      }
-    }
-  },
-  shape: {
-    dimension: {
-      precision: 5
-    },
-    spacing: {
-      padding: 5
-    }
-  }
-};
-
 var imagemin_config = {
   progressive: true,
   interlaced: true,
@@ -96,7 +72,6 @@ var imagemin_config = {
 gulp.task('images', function() {
   gulp.src(paths.images.original)
   //   .pipe(plugins.imagemin(imagemin_config))
-    .pipe(plugins.svgSprite(svg_config))
     .pipe(gulp.dest(paths.images.optimized))
 });
 
@@ -109,9 +84,10 @@ gulp.task('production', ['images', 'css']);
 // Error reporting.
 var reportError = function(error) {
   plugins.notify({
-    title: 'Gulp task error',
-    message: 'Check the console.'
+    title: error.messageOriginal,
+    message: 'Line ' + error.line + ' in ' + error.relativePath,
+    icon: false
   }).write(error);
-  console.log(error.toString());
+  // console.log(error.toString());
   this.emit('end');
 };

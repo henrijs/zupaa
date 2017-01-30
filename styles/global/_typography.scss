@@ -11,19 +11,19 @@ body {
   font-family: $f-light-normal;
   font-size: rem($fs-default);
   line-height: $lh-default;
-  color: $c-fit-gray-fg;
+  color: gray;
 }
 
 a,
 a:visited {
-  color: $c-fit-blue-default;
+  color: gray;
   text-decoration: none;
   outline: none;
 }
 
 a:hover,
 a:active {
-  color: $c-fit-blue-default;
+  color: gray;
 }
 
 address {
@@ -40,7 +40,7 @@ cite {
   font-family: $f-light-normal;
   font-weight: normal;
   margin: 0;
-  color: $c-fit-blue-default;
+  color: gray;
 }
 
 h1 {
@@ -88,13 +88,13 @@ table td {
 }
 
 table td {
-  color: $c-fit-blue-default;
+  color: gray;
 }
 
 table th a:link,
 table th a:visited {
   display: inline-block;
-  background: $c-fit-blue-default;
+  background: gray;
   clear: both;
   width: 21px;
   height: 21px;

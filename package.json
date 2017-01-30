@@ -1,11 +1,16 @@
 {
-  "name": "Zupaa theme",
+  "name": "theme",
+  "private": true,
   "version": "1.0.0",
   "description": "Stack for Zupaa theme.",
   "author": "henrijs.seso@wunder.io",
   "license": "MIT",
   "scripts": {
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+  },
+  "engines": {
+    "node": ">=6.9.1 <7.1.0",
+    "yarn": "^0.19.1"
   },
   "devDependencies": {
     "bourbon": "~4.2.7",
@@ -16,13 +21,11 @@
     "gulp-notify": "~2.2.0",
     "gulp-sass": "~3.0.0",
     "gulp-sourcemaps": "~1.9.1",
-    "gulp-svg-sprite": "^1.3.6",
     "susy": "~2.2.12",
     "webfont": "~7.0.2"
   },
   "dependencies": {
     "jquery-match-height": "~0.7.0",
-    "jquery-waypoints": "~2.0.5",
     "owl.carousel": "~2.2.0"
   }
 }

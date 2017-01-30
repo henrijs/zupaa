@@ -12,7 +12,7 @@
 // Import global styles.
 @import "global/extendibles";
 
-.debug-layout {
+.js-debug-layout {
   @extend %clearfix;
   @include show-grid;
 }

@@ -7,7 +7,7 @@
    */
   Drupal.behaviors.debugLayout = {
     attach: function (context, settings) {
-      $('.l-container', context).wrapInner('<div class="debug-layout" />');
+      $('.layout-container', context).wrapInner('<div class="js-debug-layout" />');
     }
   };
 

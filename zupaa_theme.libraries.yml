@@ -13,13 +13,6 @@ fitfirst__owl_carousel:
   dependencies:
     - core/jquery
 
-fitfirst__waypoints:
-  js:
-    node_modules/jquery-waypoints/waypoints.min.js: {}
-    node_modules/jquery-waypoints/shortcuts/sticky-elements/waypoints-sticky.min.js: {}
-  dependencies:
-    - core/jquery
-
 global:
   js:
     js/element--select.js: {}
@@ -28,7 +21,7 @@ global:
     js/menu--primary--toggle.js: {}
   css:
     component:
-      css/style.css: {}
+      dist/css/style.css: {}
   dependencies:
     - core/drupal
     - core/jquery
