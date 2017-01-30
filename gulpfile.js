@@ -62,6 +62,13 @@ gulp.task('css', function() {
     .pipe(gulp.dest(paths.css));
 });
 
+gulp.task('svg', function() {
+  return gulp.src('images/glyphs/**/*.svg')
+    .pipe(plugins.svgmin())
+    .pipe(plugins.inlineSvg())
+    .pipe(gulp.dest('dist/images/glyphs'));
+});
+
 var imagemin_config = {
   progressive: true,
   interlaced: true,
