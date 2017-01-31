@@ -3,6 +3,7 @@
 // Modules.
 var
   gulp = require('gulp'),
+  breakpoints = require('drupal-breakpoints-scss'),
   plugins = require('gulp-load-plugins')(),
   browserSync = require('browser-sync').create();
 
@@ -69,7 +70,14 @@ gulp.task('svg', function() {
     .pipe(gulp.dest('dist/images/glyphs'));
 });
 
-var imagemin_config = {
+gulp.task('breakpoints', function() {
+  return gulp.src('./zupaa_theme.breakpoints.yml')
+    .pipe(breakpoints.ymlToScss())
+    .pipe(plugins.rename('_breakpoints.scss'))
+    .pipe(gulp.dest('./dist/breakpoints'))
+});
+
+var imagemin_config = {git status
   progressive: true,
   interlaced: true,
   svgoPlugins: [{cleanupIDs: false}]
@@ -86,7 +94,7 @@ gulp.task('images', function() {
 gulp.task('default', ['sync']);
 
 // Run watch and wait for changes
-gulp.task('production', ['images', 'css']);
+gulp.task('production', ['breakpoints', 'images', 'css']);
 
 // Error reporting.
 var reportError = function(error) {

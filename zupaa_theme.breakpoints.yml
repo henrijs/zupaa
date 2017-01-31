@@ -1,0 +1,34 @@
+zupaa.small:
+  label: bp-small
+  mediaQuery: 'all and (max-width: 640px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+zupaa.medium:
+  label: bp-medium
+  mediaQuery: 'all and (min-width: 641px) and (max-width: 1000px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+zupaa.large:
+  label: bp-large
+  mediaQuery: 'all and (min-width: 1001px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+zupaa.medium-up:
+  label: bp-medium-up
+  mediaQuery: 'all and (min-width: 641px)'
+  weight: 1
+  multipliers:
+    - 1x
+
+zupaa.medium-down:
+  label: bp-medium-down
+  mediaQuery: 'all and (max-width: 1000px)'
+  weight: 1
+  multipliers:
+    - 1x
