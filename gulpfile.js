@@ -71,13 +71,13 @@ gulp.task('svg', function() {
 });
 
 gulp.task('breakpoints', function() {
-  return gulp.src('./zupaa_theme.breakpoints.yml')
+  return gulp.src('./zupaa.breakpoints.yml')
     .pipe(breakpoints.ymlToScss())
     .pipe(plugins.rename('_breakpoints.scss'))
     .pipe(gulp.dest('./dist/breakpoints'))
 });
 
-var imagemin_config = {git status
+var imagemin_config = {
   progressive: true,
   interlaced: true,
   svgoPlugins: [{cleanupIDs: false}]

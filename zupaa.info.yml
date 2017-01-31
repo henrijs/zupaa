@@ -10,7 +10,7 @@ base theme: classy
 # Defines libraries group in which we can add css/js.
 libraries:
   - core/normalize
-  - zupaa_theme/global
+  - zupaa/global
 
 # Override or disable libraries defined elsewhere.
 #libraries-override:
