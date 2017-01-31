@@ -9,7 +9,7 @@ var
 // Paths.
 var paths = {
   scripts:     'scripts/**/*.js',
-  css:    'dist/css',
+  css:    'dist/styles',
   maps:    '.',
   styles:   'styles/**/*.scss',
   templates:   'templates/**/*.twig',

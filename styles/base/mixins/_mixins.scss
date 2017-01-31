@@ -1,11 +1,1 @@
-@mixin list($arrangement: vertical) {
-  list-style-type: none;
-  padding: 0;
-
-  @if $arrangement == horizontal {
-    li {
-      display: inline-block;
-      vertical-align: top;
-    }
-  }
-}
+@import "mixins--list";

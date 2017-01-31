@@ -5,12 +5,12 @@ core: 8.x
 package: Zupaa
 
 # Defines the base theme
-base theme: stable
+base theme: classy
 
 # Defines libraries group in which we can add css/js.
 libraries:
   - core/normalize
-  - zupaa/global
+  - zupaa_theme/global
 
 # Override or disable libraries defined elsewhere.
 #libraries-override:
@@ -21,7 +21,7 @@ libraries:
 
 # Regions
 ckeditor_stylesheets:
-  - css/editor.css
+  - dist/styles/editor.css
 
 # Regions
 regions:

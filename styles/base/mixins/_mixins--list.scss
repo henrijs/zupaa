@@ -1,0 +1,14 @@
+/// Removes default list style, margins and paddings from UL and LI elements.
+/// Arranges list horizontally for use as a menu.
+
+@mixin list($arrangement: vertical) {
+  list-style-type: none;
+  padding: 0;
+
+  @if $arrangement == horizontal {
+    li {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+}

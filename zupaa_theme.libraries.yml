@@ -15,13 +15,10 @@ fitfirst__owl_carousel:
 
 global:
   js:
-    js/element--select.js: {}
-    js/links--external.js: {}
-    js/menu--footer--toggle.js: {}
-    js/menu--primary--toggle.js: {}
+    js/demo.js: {}
   css:
     component:
-      dist/css/style.css: {}
+      dist/styles/style.css: {}
   dependencies:
     - core/drupal
     - core/jquery

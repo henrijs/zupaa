@@ -1,110 +1,38 @@
-* {
-  margin: 0;
-}
+html {}
 
-html {
-  height: 100%;
-  font-size: 100%;
-}
-
-body {
-  font-family: $f-light-normal;
-  font-size: rem($fs-default);
-  line-height: $lh-default;
-  color: gray;
-}
+body {}
 
 a,
-a:visited {
-  color: gray;
-  text-decoration: none;
-  outline: none;
-}
+a:visited {}
 
-a:hover,
-a:active {
-  color: gray;
-}
+a:hover {}
 
-address {
-  font-style: normal;
-}
+a:active {}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-cite {
-  font-family: $f-light-normal;
-  font-weight: normal;
-  margin: 0;
-  color: gray;
-}
+address {}
 
-h1 {
-  font-family: $f-light-italic;
-  font-size: rem(40);
-  line-height: 1.3;
-  position: relative;
-  text-transform: uppercase;
-}
+h1, h2, h3, h4, h5, h6 {}
 
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+h6 {}
 
-h2 {
-  font-family: $f-light-italic;
-  font-size: rem(30);
-  line-height: 1.3;
-  text-transform: uppercase;
-}
+cite {}
 
-h3 {
-  font-size: rem(20);
-  //text-transform: uppercase;
-  font-family: $f-bold-normal;
-}
-
-p {
-  //margin: 0;
-}
+p {}
 
 ul, ol {}
 
+li {}
 
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
+table {}
 
-table th,
-table td {
-  border: 1px solid #dedede;
-  background: #ffffff;
-  color: #373739;
-  text-align: center;
-  font-weight: normal;
-  padding: 15px 0 12px;
-}
+tr {}
 
-table td {
-  color: gray;
-}
-
-table th a:link,
-table th a:visited {
-  display: inline-block;
-  background: gray;
-  clear: both;
-  width: 21px;
-  height: 21px;
-  border-radius: 50%;
-  font-family: $f-bold-italic;
-  color: #ffffff;
-  padding-top: 1px;
-}
-
-table + p {}
+th, td {  }
 
 img {
   display: block;

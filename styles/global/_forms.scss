@@ -1,107 +1,44 @@
-// Form
-// ---------------------------------------------------------------------------------------------------------------------
+form {}
 
-form {
-  width: 100%;
-  text-align: left;
-}
+label {}
 
-// Label
-// ---------------------------------------------------------------------------------------------------------------------
+fieldset {}
 
-label {
-  display: block;
-  margin-bottom: .25rem;
-}
-
-// Fieldset
-// ---------------------------------------------------------------------------------------------------------------------
-
-fieldset {
-  border: none;
-}
-
-legend {
-  width: 100%;
-  margin-bottom: .75rem;
-}
-
-// Select, input, textarea
-// ---------------------------------------------------------------------------------------------------------------------
+legend {}
 
 select,
 input,
-textarea {
-  width: 100%;
-  font-family: $f-light-normal;
-  line-height: normal;
-  border: solid 1px #e3e3e3;
-  padding: .5rem .75rem;
-}
+textarea {}
 
-// Select
-// ---------------------------------------------------------
+select {}
 
-select {
-  cursor: pointer;
-}
-
-// Input, text
-// ---------------------------------------------------------
+textarea {}
 
 input[type="text"],
 input[type="email"],
-input[type="password"] {
-  width: 100%;
-  outline: none;
-}
+input[type="password"] {}
 
-// Textarea
-// ---------------------------------------------------------
-
-textarea {
-  width: 100%;
-  outline: none;
-  resize: none;
-}
-
-// Input, submit
-// ---------------------------------------------------------
-
-form button {
-  //@extend %button;
-}
-
-// Check box, radio button
-// ---------------------------------------------------------------------------------------------------------------------
+input[type="submit"],
+button {}
 
 input[type="checkbox"],
-input[type="radio"] {
-  float: left;
-  width: auto;
-  margin-right: 4px;
-  margin-top: .75rem;
-  position: relative;
-  top: 2px;
-}
+input[type="radio"] {}
 
-// Placeholder
-// ---------------------------------------------------------------------------------------------------------------------
 
 ::-webkit-input-placeholder {
-  color: #bdbdbd;
+  color: gray;
 }
 
 :-moz-placeholder {
-  color: #bdbdbd;
+  color: gray;
   opacity: 1;
 }
 
 ::-moz-placeholder {
-  color: #bdbdbd;
+  color: gray;
   opacity: 1;
 }
 
 :-ms-input-placeholder {
-  color: #bdbdbd;
+  color: gray;
 }
