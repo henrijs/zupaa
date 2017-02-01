@@ -9,12 +9,12 @@ use Drupal\Core\Site\Settings;
 /**
  * Implements hook_page_attachments_alter().
  */
-function fitfirst_page_attachments_alter(array &$attachments) {
+function zupaa_page_attachments_alter(array &$attachments) {
   if (Settings::get('debug_browsersync')) {
-    $attachments['#attached']['library'][] = 'fitfirst/debug__browsersync';
+    $attachments['#attached']['library'][] = 'zupaa/debug__browsersync';
   }
 
   if (Settings::get('debug_layout')) {
-    $attachments['#attached']['library'][] = 'fitfirst/debug__layout';
+    $attachments['#attached']['library'][] = 'zupaa/debug__layout';
   }
 }

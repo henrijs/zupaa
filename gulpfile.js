@@ -2,10 +2,12 @@
 
 // Modules.
 var
+  async = require('async'),
   gulp = require('gulp'),
   breakpoints = require('drupal-breakpoints-scss'),
   plugins = require('gulp-load-plugins')(),
-  browserSync = require('browser-sync').create();
+  browserSync = require('browser-sync').create(),
+  buildTime = Math.round(Date.now()/1000);
 
 // Paths.
 var paths = {
@@ -74,7 +76,39 @@ gulp.task('breakpoints', function() {
   return gulp.src('./zupaa.breakpoints.yml')
     .pipe(breakpoints.ymlToScss())
     .pipe(plugins.rename('_breakpoints.scss'))
-    .pipe(gulp.dest('./dist/breakpoints'))
+    .pipe(gulp.dest('./dist/scss'))
+});
+
+gulp.task('font-icon', function(done) {
+  var iconStream = gulp.src(['images/glyphs/*.svg'])
+    .pipe(plugins.iconfont({
+      fontName: 'font-icon',
+      prependUnicode: true,
+      formats: ['ttf', 'eot', 'woff', 'woff2', 'svg'],
+      timestamp: buildTime
+    }));
+
+  async.parallel([
+    function handleGlyphs (cb) {
+      iconStream.on('glyphs', function(glyphs, options) {
+        gulp.src('images/glyphs/font-icon.scss.template')
+          .pipe(plugins.consolidate('lodash', {
+            glyphs: glyphs,
+            fontName: 'font-icon',
+            fontPath: '../fonts/font-icon/',
+            className: 'i'
+          }))
+          .pipe(plugins.rename('_font-icon.scss'))
+          .pipe(gulp.dest('dist/scss/'))
+          .on('finish', cb);
+      });
+    },
+    function handleFonts (cb) {
+      iconStream
+        .pipe(gulp.dest('dist/fonts/font-icon/'))
+        .on('finish', cb);
+    }
+  ], done);
 });
 
 var imagemin_config = {
@@ -103,6 +137,5 @@ var reportError = function(error) {
     message: 'Line ' + error.line + ' in ' + error.relativePath,
     icon: false
   }).write(error);
-  // console.log(error.toString());
   this.emit('end');
 };

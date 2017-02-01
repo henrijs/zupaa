@@ -1,3 +1,11 @@
 main {
   background-color: lightcyan;
 }
+
+h1 {
+  @include icon($i-oval, .25em);
+}
+
+li {
+  @include icon($i-star, .25em, after);
+}

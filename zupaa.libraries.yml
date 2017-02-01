@@ -15,7 +15,7 @@ fitfirst__owl_carousel:
 
 global:
   js:
-    js/demo.js: {}
+    scripts/demo.js: {}
   css:
     component:
       dist/styles/style.css: {}
@@ -25,14 +25,14 @@ global:
 
 debug__browsersync:
   js:
-    js/debug--browsersync.js: {}
+    scripts/debug--browsersync.js: {}
   dependencies:
     - core/drupal
     - core/jquery
 
 debug__layout:
   js:
-    js/debug--layout.js: {}
+    scripts/debug--layout.js: {}
   css:
     component:
       css/debug.css: {}
